@@ -1,0 +1,29 @@
+[global_config]
+  title_transmit_bg_color = "#000000"
+  title_inactive_fg_color = "#f7f7f7"
+  title_transmit_fg_color = "#f7f7f7"
+  title_inactive_bg_color = "#7a7a7a"
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    palette = "#000000:#b84131:#7da900:#c4a500:#62a3c4:#ba8acc:#207383:#a1a1a1:#7a7a7a:#d6837c:#c4f137:#fee14d:#8dcff0:#f79aff:#6ad9cf:#f7f7f7"
+    background_image = None
+    background_darkness = 0.94
+    scrollback_lines = 2000
+    background_type = transparent
+    use_system_font = False
+    cursor_color = "#f7f7f7"
+    foreground_color = "#f7f7f7"
+    show_titlebar = False
+    font = Inconsolata for Powerline Medium 12
+    background_color = "#212121"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
