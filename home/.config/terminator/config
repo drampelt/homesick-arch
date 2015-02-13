@@ -17,7 +17,7 @@
     foreground_color = "#f7f7f7"
     scroll_on_output = False
     show_titlebar = False
-    font = Inconsolata for Powerline Medium 12
+    font = Droid Sans Mono for Powerline 10
     background_color = "#1b1b1b"
 [layouts]
   [[default]]
