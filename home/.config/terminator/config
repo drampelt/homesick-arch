@@ -15,9 +15,10 @@
     use_system_font = False
     cursor_color = "#f7f7f7"
     foreground_color = "#f7f7f7"
+    scroll_on_output = False
     show_titlebar = False
     font = Inconsolata for Powerline Medium 12
-    background_color = "#212121"
+    background_color = "#1b1b1b"
 [layouts]
   [[default]]
     [[[child1]]]
