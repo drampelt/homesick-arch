@@ -71,5 +71,5 @@ AVOL=`volume | format`
 AVOLF=`echo ${AVOL::-1}`
 MVOL=`mpc volume`
 MVOLF=`echo ${MVOL:7:-1}`
-SPARK=`sparklines 0 100 $AVOLF $MVOLF`
+SPARK=`spark 0 100 $AVOLF $MVOLF`
 echo "$AVOL ${SPARK:2}${MVOL:7}"
