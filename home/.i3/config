@@ -66,6 +66,18 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# move workspace
+bindsym $mod+Ctrl+h move workspace to output left
+bindsym $mod+Ctrl+n move workspace to output down
+bindsym $mod+Ctrl+e move workspace to output up
+bindsym $mod+Ctrl+i move workspace to output right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+Ctrl+Down move workspace to output down
+bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+Right move workspace to output right
+
 # split in horizontal orientation
 bindsym $mod+Shift+m split h
 
@@ -93,16 +105,16 @@ bindsym $mod+a focus parent
 bindsym $mod+o focus child
 
 # Custom workspaces
-set $WS1 1  TERM
+set $WS1 1  WEB
 set $WS2 2  WEB
 set $WS3 3  CODE
-set $WS4 4  MEDIA
-set $WS5 5  COMM
+set $WS4 4  CODE
+set $WS5 5  MEDIA
 set $WS6 6 
 set $WS7 7 
 set $WS8 8 
-set $WS9 9 
-set $WS10 10 
+set $WS9 9  TERM
+set $WS10 10  TERM
 
 # switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -209,7 +221,8 @@ bindsym $mod+Shift+s mode $ssmenu
 
 # Gaps
 gaps inner 10
-gaps outer 20
+gaps outer 10
+smart_gaps on
 
 set $mode_gaps Gaps:  [o]uter,  [i]nner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -255,10 +268,16 @@ bindsym Mod4+Shift+Down exec "amixer -q set Master 2dB- unmute"; exec "pkill -RT
 bindsym Mod4+Shift+Left exec "mpc volume -2"; exec "pkill -RTMIN+10 i3blocks"
 bindsym Mod4+Shift+Right exec "mpc volume +2"; exec "pkill -RTMIN+10 i3blocks"
 # Control
-bindsym Mod4+F9 exec "mpc prev"
-bindsym Mod4+F10 exec "mpc toggle"
-bindsym Mod4+F11 exec "mpc toggle"
-bindsym Mod4+F12 exec "mpc next"
+# bindsym Mod4+F9 exec "mpc prev"
+# bindsym Mod4+F10 exec "mpc toggle"
+# bindsym Mod4+F11 exec "mpc toggle"
+# bindsym Mod4+F10 exec "xdotool key XF86AudioPlay"
+# bindsym Mod4+F11 exec "xdotool key XF86AudioPlay"
+# bindsym Mod4+F12 exec "mpc next"
+
+# bindsym Control+Shift+button2 exec "xdotool key XF86AudioPlay"
+# bindsym $mod+button2 exec "xdotool key XF86AudioPlay"
+# bindsym Control+Shift+button2 exec "touch /tmp/yolo"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -285,3 +304,7 @@ client.focused_inactive #2D2D2D #151515 #2D2D2D
 client.unfocused        #222222 #151515 #605e56
 client.urgent           #a5a5a5 #a5a5a5 #1E1E1E
 client.background       #161616
+
+# Background
+exec --no-startup-id "feh --bg-scale ~/Pictures/Wallpapers/harambe.jpg"
+exec --no-startup-id "xbindkeys -p"

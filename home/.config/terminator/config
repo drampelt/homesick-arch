@@ -14,3 +14,4 @@
 [profiles]
   [[default]]
     cursor_color = "#aaaaaa"
+    scrollback_lines = 5000
